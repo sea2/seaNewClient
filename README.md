@@ -1,28 +1,16 @@
-# MvpApp
+# 
 
 ##### 练习MVP架构开发的App，算是对自己学过的知识做一个总结，做了有一段时间，界面比较多，代码量还是有的，里面做了大量封装，整体代码整理得很干净。里面有我自己封装的一些库和类，可以作为借鉴参考，有什么问题可以提出来探讨，有好的想法和修改建议也欢迎提交代码上来。
-##### 现在网易的图片接口不能用了，所以“美女”界面获取不到数据了，如果想看效果的可以试着把“福利”标签下的界面按“美女”界面的处理方式改过去，刚好可以拿来自己练手~，代码我暂时不想去改了。
+##### 现在网易的图片接口不能用了，所以“美女”界面获取不到数据了，如果想看效果的可以试着把“福利”标签下的界面按“美女”界面的处理方式改过去，刚好可以拿来自己练手~，代码我暂时不想去改了。视频的总结处理
 
 ## Screenshot
 
 ##### 项目结构：
 
-![](https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/project.png)
+
 
 ##### 应用截图：
 
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E4%B8%BB%E9%A1%B5.png" height = "400" alt="主页" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E6%96%B0%E9%97%BB%E4%B8%BB%E9%A1%B5.png" height = "400" alt="新闻主页" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E6%96%B0%E9%97%BB%E8%AF%A6%E6%83%85.png" height = "400" alt="新闻详情" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E4%B8%93%E9%A2%98.png" height = "400" alt="专题" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E6%A0%8F%E7%9B%AE%E7%AE%A1%E7%90%86.png" height = "400" alt="栏目管理" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E5%9B%BE%E7%89%87%E6%96%B0%E9%97%BB.png" height = "400" alt="图片新闻" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E5%9B%BE%E7%89%87%E5%88%97%E8%A1%A8.png" height = "400" alt="图片列表" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E5%A4%A7%E5%9B%BE.png" height = "400" alt="大图" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E4%B8%8B%E8%BD%BD%E7%AE%A1%E7%90%86.png" height = "400" alt="下载管理" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE.png" height = "400" alt="视频播放" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E5%9B%BE%E7%89%87%E5%8A%A8%E5%9B%BE.gif" height = "400" alt="图片动图" align=center />
-<img src="https://raw.githubusercontent.com/Rukey7/ScreenShot/master/MvpApp/%E4%B8%8B%E8%BD%BD%E5%8A%A8%E5%9B%BE.gif" height = "400" alt="下载管理" align=center />
 
 ## 用到的第三方库
 
