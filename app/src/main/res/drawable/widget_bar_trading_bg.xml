@@ -1,0 +1,8 @@
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/widget_bar_trading_normal" android:state_enabled="true" android:state_focused="true"
+          android:state_pressed="false"/>
+    <item android:drawable="@drawable/widget_bar_trading_press" android:state_enabled="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/widget_bar_trading_press" android:state_checked="true" android:state_enabled="true"/>
+    <item android:drawable="@drawable/widget_bar_trading_normal"/>
+</selector>

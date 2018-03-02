@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/layout_toolbar"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/black"/>
+
+        <com.dl7.player.media.IjkPlayerView
+            android:id="@+id/video_player"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.dl7.player.widgets.MarqueeTextView
+                android:id="@+id/tv_title_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_video_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/sel_btn_press_bg"
+                android:padding="5dp"
+                android:src="@drawable/ic_video_share"/>
+
+            <com.sackcentury.shinebuttonlib.ShineButton
+                android:id="@+id/iv_video_collect"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                app:btn_color="#8a8a8a"
+                app:btn_fill_color="#e91e63"/>
+
+            <ImageView
+                android:id="@+id/iv_video_download"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/sel_btn_press_bg"
+                android:padding="5dp"
+                android:src="@drawable/sel_btn_video_download"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#dddddd"
+            android:gravity="center"
+            android:text="Something"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_line"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="发射弹幕吧"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp"/>
+
+        </ScrollView>
+
+
+        <com.lhy.mvp.widget.SimpleButton
+            android:id="@+id/sb_send"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:sb_bg_color="@color/colorAccent"
+            app:sb_border_color="@color/colorAccent"
+            app:sb_text="发表"
+            app:sb_text_color="@color/white"/>
+    </LinearLayout>
+</RelativeLayout>
+
+

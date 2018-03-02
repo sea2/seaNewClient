@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_theme"
+        android:orientation="horizontal"
+        android:paddingTop="35dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_search_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/pic_markets_search"/>
+
+            <com.lhy.mvp.widget.EditTextWithDel
+                android:id="@+id/et_search_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingRight="10dp"
+                android:textColor="@color/tv_color_33"
+                android:textColorHint="@color/tv_color_99"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_bg_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <RadioGroup
+            android:id="@+id/tabs_rg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_theme"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:paddingTop="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/tab_rb_stock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:checked="true"
+                android:drawableBottom="@drawable/selector_search_radio"
+                android:drawablePadding="15dp"
+                android:gravity="center_horizontal"
+                android:text="新闻"
+                android:textColor="@drawable/selector_color_text_radio"
+                />
+
+            <RadioButton
+                android:paddingTop="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/tab_rb_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:drawableBottom="@drawable/selector_search_radio"
+                android:drawablePadding="15dp"
+                android:gravity="center_horizontal"
+                android:text="图片"
+                android:textColor="@drawable/selector_color_text_radio"
+                />
+
+            <RadioButton
+                android:paddingTop="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/tab_rb_post"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:drawableBottom="@drawable/selector_search_radio"
+                android:drawablePadding="15dp"
+                android:gravity="center_horizontal"
+                android:text="视频"
+                android:textColor="@drawable/selector_color_text_radio"
+                />
+
+
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/tab_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
