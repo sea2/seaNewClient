@@ -7,6 +7,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -91,7 +92,7 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
         initViews();
         if (isUserDefinedColorForStatusBar) {//自定义状态栏的颜色
             setStatusBarTintResource(R.color.color_theme);
-        }else{
+        } else {
             setLopStatBar(R.color.transparent);
         }
         initSwipeRefresh();
@@ -125,9 +126,9 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = this.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN  | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(color));
+            window.setStatusBarColor(ContextCompat.getColor(this, color));
             // window.setNavigationBarColor(Color.TRANSPARENT);
         }
     }
