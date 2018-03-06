@@ -16,6 +16,7 @@ public abstract class BaseSwipeBackActivity<T extends IBasePresenter> extends Ba
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        isUserDefinedColorForStatusBar = false;
         super.onCreate(savedInstanceState);
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mSwipeBackLayout = new SwipeBackLayout(this);
