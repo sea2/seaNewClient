@@ -9,6 +9,7 @@
     android:background="@android:color/black"
     app:fix_height="100dp"
     app:mode="drag"
+    android:fitsSystemWindows="true"
     tools:context=".module.news.photoset.PhotoSetActivity">
 
     <com.lhy.mvp.widget.PhotoViewPager

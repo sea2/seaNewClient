@@ -4,10 +4,6 @@ import com.lhy.mvp.api.RetrofitService;
 import com.lhy.mvp.api.bean.NewsDetailInfo;
 import com.lhy.mvp.module.base.IBasePresenter;
 import com.lhy.mvp.utils.ListUtils;
-import com.lhy.mvp.api.RetrofitService;
-import com.lhy.mvp.api.bean.NewsDetailInfo;
-import com.lhy.mvp.module.base.IBasePresenter;
-import com.lhy.mvp.utils.ListUtils;
 import com.orhanobut.logger.Logger;
 
 import rx.Subscriber;
@@ -18,7 +14,6 @@ import rx.functions.Action1;
  * Created by long on 2016/8/25.
  * 新闻详情 Presenter
  */
-@Deprecated
 public class NewsDetailPresenter implements IBasePresenter {
 
     private static final String HTML_IMG_TEMPLATE = "<img src=\"http\" />";

@@ -31,7 +31,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-@Deprecated
 public class NewsDetailActivity extends BaseSwipeBackActivity<IBasePresenter> implements INewsDetailView {
 
     private static final String APP_KEY = "AppKey";

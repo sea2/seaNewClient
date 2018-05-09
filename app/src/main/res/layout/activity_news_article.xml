@@ -10,7 +10,6 @@
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/toolbar_margin_top"
         android:overScrollMode="never">
 
         <LinearLayout
@@ -78,6 +77,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_margin_top"
+        android:layout_height="20dp"
         android:background="@color/colorPrimary"/>
 </FrameLayout>

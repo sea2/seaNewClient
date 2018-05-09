@@ -1,13 +1,14 @@
 package com.lhy.mvp.module.base;
 
 import android.annotation.TargetApi;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -93,7 +94,7 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
         if (isUserDefinedColorForStatusBar) {//自定义状态栏的颜色
             setStatusBarTintResource(R.color.color_theme);
         } else {
-            setLopStatBar(R.color.transparent);
+            setStatusBarTintResource(R.color.transparent);
         }
         initSwipeRefresh();
         updateViews(false);
@@ -128,7 +129,7 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(ContextCompat.getColor(this, color));
+            window.setStatusBarColor(this.getResources().getColor(color));
             // window.setNavigationBarColor(Color.TRANSPARENT);
         }
     }
@@ -160,6 +161,15 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
             winParams.flags &= ~bits;
         }
         win.setAttributes(winParams);
+    }
+
+    @Override
+    public Resources getResources() {  //不受系统字体影响
+        Resources res = super.getResources();
+        Configuration config = new Configuration();
+        config.setToDefaults();
+        res.updateConfiguration(config, res.getDisplayMetrics());
+        return res;
     }
 
 

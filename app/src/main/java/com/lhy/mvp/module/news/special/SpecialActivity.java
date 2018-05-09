@@ -43,6 +43,9 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
+/**
+ * 专题
+ */
 public class SpecialActivity extends BaseSwipeBackActivity<IBasePresenter> implements ISpecialView {
 
     private static final String SPECIAL_KEY = "SpecialKey";

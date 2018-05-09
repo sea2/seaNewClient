@@ -11,6 +11,7 @@ import com.dl7.recycler.adapter.BaseQuickAdapter;
 import com.dl7.recycler.helper.RecyclerViewHelper;
 import com.dl7.recycler.listener.OnRequestDataListener;
 import com.lhy.mvp.R;
+import com.lhy.mvp.adapter.NewsMultiListAdapter;
 import com.lhy.mvp.adapter.item.NewsMultiItem;
 import com.lhy.mvp.api.bean.NewsInfo;
 import com.lhy.mvp.injector.components.DaggerNewsListComponent;
@@ -41,7 +42,6 @@ public class NewsListFragment extends BaseFragment<IBasePresenter> implements IN
     @Inject
     BaseQuickAdapter mAdapter;
     private SliderLayout mAdSlider;
-
 
 
     private String mNewsId;
@@ -91,6 +91,8 @@ public class NewsListFragment extends BaseFragment<IBasePresenter> implements IN
                 .newsListModule(new NewsListModule(this, mNewsId))
                 .build()
                 .inject(this);
+        mPresenter = new NewsListPresenter(this, mNewsId);
+        mAdapter = new NewsMultiListAdapter(mContext);
     }
 
     @Override

@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.text.TextUtils;
@@ -40,6 +41,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 新闻详情
+ */
 public class NewsArticleActivity extends BaseSwipeBackActivity<IBasePresenter> implements INewsArticleView {
 
     private static final String SHOW_POPUP_DETAIL = "ShowPopupDetail";
@@ -93,6 +97,12 @@ public class NewsArticleActivity extends BaseSwipeBackActivity<IBasePresenter> i
         finish();
         startActivity(intent);
         overridePendingTransition(R.anim.slide_bottom_entry, R.anim.hold);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        isUserDefinedColorForStatusBar = false;
+        super.onCreate(savedInstanceState);
     }
 
     @Override

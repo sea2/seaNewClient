@@ -25,6 +25,7 @@ public class FileDAOImpl implements FileDAO {
         private static final FileDAOImpl instance = new FileDAOImpl();
     }
 
+
     public static FileDAOImpl getInstance() {
         return HolderClass.instance;
     }

@@ -16,7 +16,6 @@ public abstract class BaseSwipeBackActivity<T extends IBasePresenter> extends Ba
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        isUserDefinedColorForStatusBar = false;
         super.onCreate(savedInstanceState);
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mSwipeBackLayout = new SwipeBackLayout(this);
@@ -28,6 +27,7 @@ public abstract class BaseSwipeBackActivity<T extends IBasePresenter> extends Ba
         mSwipeBackLayout.attachToActivity(this, SwipeBackLayout.EDGE_LEFT);
         // 触摸边缘变为屏幕宽度的1/2
         mSwipeBackLayout.setEdgeSize(getResources().getDisplayMetrics().widthPixels / 2);
+
     }
 
     public SwipeBackLayout getSwipeBackLayout() {
