@@ -4,10 +4,6 @@ import com.lhy.mvp.api.RetrofitService;
 import com.lhy.mvp.api.bean.NewsDetailInfo;
 import com.lhy.mvp.module.base.IBasePresenter;
 import com.lhy.mvp.utils.ListUtils;
-import com.lhy.mvp.api.RetrofitService;
-import com.lhy.mvp.api.bean.NewsDetailInfo;
-import com.lhy.mvp.module.base.IBasePresenter;
-import com.lhy.mvp.utils.ListUtils;
 import com.orhanobut.logger.Logger;
 
 import rx.Subscriber;
@@ -32,7 +28,7 @@ public class NewsArticlePresenter implements IBasePresenter {
 
     @Override
     public void getData(boolean isRefresh) {
-        RetrofitService.getNewsDetail(mNewsId)
+      RetrofitService.getNewsDetail(mNewsId)
                 .doOnSubscribe(new Action0() {
                     @Override
                     public void call() {

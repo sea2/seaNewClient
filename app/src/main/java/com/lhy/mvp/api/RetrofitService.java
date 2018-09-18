@@ -95,6 +95,7 @@ public class RetrofitService {
                 .build();
         sNewsService = retrofit.create(INewsApi.class);
 
+
         retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
